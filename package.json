@@ -1,0 +1,25 @@
+{
+  "name": "ayoba-microapps-react",
+  "version": "1.0.0",
+  "description": "Ayoba Microapps but in React",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erikbg7/amr.git"
+  },
+  "keywords": [
+    "ayoba",
+    "microapps",
+    "react",
+    "webview"
+  ],
+  "author": "Erik Blanca <erik.bg7@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/erikbg7/amr/issues"
+  },
+  "homepage": "https://github.com/erikbg7/amr#readme"
+}
