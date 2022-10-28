@@ -23,7 +23,11 @@
     "url": "https://github.com/erikbg7/amr/issues"
   },
   "homepage": "https://github.com/erikbg7/amr#readme",
+  "peerDependencies": {
+    "react": "^16.8.3 || ^17 || ^18"
+  },
   "devDependencies": {
+    "@types/react": "^18.0.24",
     "eslint": "^8.26.0",
     "prettier": "^2.7.1",
     "ts-node": "^10.9.1",
