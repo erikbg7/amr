@@ -3,8 +3,6 @@ const getURLParameter = (param: string) => {
     const searchParameters = window.location.search.substring(1);
     const parametersList = searchParameters.split('&');
 
-    console.log({ parametersList });
-
     const parameter = parametersList.find((p) => p.split('=')[0] === param);
     const value = parameter?.split('=')?.[1];
     return value || '';
@@ -15,13 +13,13 @@ const getURLParameter = (param: string) => {
 };
 
 type AyobaContext = 'chat' | 'discovery';
-type AyobaIsDebug = 'true' | 'false';
+type AyobaIsDebug = boolean;
 
 const getSelfJidFromUrl = (): string => getURLParameter('jid');
 const getContactJid = (): string => getURLParameter('contactjid');
 const getContactName = (): string => getURLParameter('contactname');
 const getAyobaContext = (): AyobaContext => getURLParameter('context') as AyobaContext;
-const getIsDebugApp = (): AyobaIsDebug => getURLParameter('debug') as unknown as AyobaIsDebug;
+const getIsDebugApp = (): AyobaIsDebug => getURLParameter('debug') === 'true';
 
 export {
   getAyobaContext,

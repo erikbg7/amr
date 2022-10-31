@@ -7,7 +7,7 @@ function getAyoba() {
   const userAgent = navigator.userAgent || navigator.vendor || window.opera;
   const isWindowsDevice = /windows phone/i.test(userAgent);
   const isIosDevice = /iphone|ipad|ipod/i.test(userAgent);
-  const isAndroidDevice = /iphone|ipad|ipod/i.test(userAgent);
+  const isAndroidDevice = /android/i.test(userAgent);
 
   // Must come first because the UA also contains "Android"
   if (isWindowsDevice) return;
