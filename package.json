@@ -2,7 +2,11 @@
   "name": "ayoba-microapps-react",
   "version": "1.0.2",
   "description": "Ayoba Microapps but in React",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "build": "tsc -p tsconfig.json && cp ./package.json ./lib/package.json",
     "test": "jest"
