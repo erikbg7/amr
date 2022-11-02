@@ -1,11 +1,23 @@
 name: Release
-"on":
+'on':
   push:
     branches:
       - next
-      - "*.x"
+      - '*.x'
 jobs:
+  tests:
+    name: Unit Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          cache: npm
+          node-version: 16
+      - run: npm install
+      - run: npm test
   release:
+    needs: [tests]
     name: release
     runs-on: ubuntu-latest
     steps:
@@ -14,8 +26,12 @@ jobs:
         with:
           cache: npm
           node-version: 16
-      - run: npm ci
-      - run: npx semantic-release
+      - name: Install Dependencies
+        run: npm ci
+      - name: Build Library
+        run: npm run build
+      - name: Run Semantic Release
+        run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.SR_NPM_TOKEN }}
