@@ -40,3 +40,4 @@ const useAyobaPayments = (): PaymentHookReturnType => {
 };
 
 export { useAyobaPayments };
+export type { PaymentStatusUpdate };
