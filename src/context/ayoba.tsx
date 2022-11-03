@@ -1,14 +1,27 @@
 import React from 'react';
-import { onPaymentStatusChanged, onPermissionsAccepted } from '../listeners';
 import { getAyobaContext } from '../utils/url';
 import { getAyobaSenders } from '../senders';
 import * as ayobaStubbedApi from '../stub';
 import { getAyoba } from '../init';
 import { AyobaChatContext, AyobaDiscoveryContext } from '../types.ayoba';
+import {
+  onAvatarChanged,
+  onNicknameChanged,
+  onPaymentStatusChanged,
+  onPermissionsAccepted,
+  onProfileChanged,
+} from '../listeners';
 
 window.onPermissionsAccepted = onPermissionsAccepted;
 window.onPaymentStatusChanged = onPaymentStatusChanged;
+window.onNicknameChanged = onNicknameChanged;
+window.onAvatarChanged = onAvatarChanged;
+window.onProfileChanged = onProfileChanged;
 window.onload = () => console.log('load');
+
+// TODO: this provider should wrap the entire app in order to attach the correct window listeners,
+//  so we can save the information if the listers are triggered as soon as the app is loaded.
+//  We should remove the context and use the provider only to do so.
 
 type Props = { children: React.ReactNode };
 type AyobaContextType = AyobaChatContext | AyobaDiscoveryContext | {};

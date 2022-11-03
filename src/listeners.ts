@@ -30,26 +30,25 @@ function onLocationChanged(lat: number, lon: number) {
 
 /**
  * The Ayoba native interface calls this method every time
- * the user profile changes (nickname or avatar)
- */
-function onProfileChanged(nickname: string, avatarPath: string) {
-  dispatchCustomEvent('onProfileChanged', { nickname, avatarPath });
-}
-
-/**
- * The Ayoba native interface calls this method every time
  * the user presence changes (infact, always online)
  */
 function onPresenceChanged(presence: string) {
   dispatchCustomEvent('onPresenceChanged', { presence });
 }
 
-/**
- * The Ayoba native interface calls this method every time
- * the user avatar changes (infact, always online)
- */
+/** In Chat Context the nickname and avatar calls are a single function. **/
+function onProfileChanged(nickname: string, avatar: string) {
+  dispatchCustomEvent('onProfileChanged', { nickname, avatar });
+}
+
+/** In Discovery (Apps) Context the nickname and avatar calls are separated in two functions. **/
+/** Calls this method every time the user avatar changes **/
 function onAvatarChanged(avatar: string) {
   dispatchCustomEvent('onAvatarChanged', { avatar });
+}
+/** Calls this method every time the user nickname changes **/
+function onNicknameChanged(nickname: string) {
+  dispatchCustomEvent('onNicknameChanged', { nickname });
 }
 
 /**
@@ -96,14 +95,6 @@ function onFileRetrievedResponse(responseCode: number, filePath: string) {
  */
 function onPictureRetrievedResponse(responseCode: number, picturePath: string) {
   dispatchCustomEvent('onPictureRetrievedResponse', { responseCode, picturePath });
-}
-
-/**
- * The Ayoba native interface calls this method every time
- * the user nickname changes (infact, always online)
- */
-function onNicknameChanged(nickname: string) {
-  dispatchCustomEvent('onNicknameChanged', { nickname });
 }
 
 export {

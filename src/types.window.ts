@@ -10,5 +10,8 @@ declare global {
       status?: PaymentStatus,
       error?: PaymentErrorId
     ) => void;
+    onNicknameChanged: (nickname: string) => void;
+    onAvatarChanged: (avatar: string) => void;
+    onProfileChanged: (nickname: string, avatar: string) => void;
   }
 }
