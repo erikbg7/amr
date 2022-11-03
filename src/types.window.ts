@@ -6,9 +6,9 @@ declare global {
   interface Window {
     onPermissionsAccepted: (paymentMethods: string[]) => void;
     onPaymentStatusChanged: (
-      transactionId: string,
-      status: PaymentStatus,
-      error: PaymentErrorId
+      transactionId?: string,
+      status?: PaymentStatus,
+      error?: PaymentErrorId
     ) => void;
   }
 }
