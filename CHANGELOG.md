@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/erikbg7/amr/compare/v1.0.4...v1.0.5) (2022-11-03)
+
+
+### Bug Fixes
+
+* :construction_worker: Retrieve Profile information from Brigde API ([4b57663](https://github.com/erikbg7/amr/commit/4b576631173be686739a989b7f673b0ee25429cb))
+
 ## [1.0.4](https://github.com/erikbg7/amr/compare/v1.0.3...v1.0.4) (2022-11-03)
 
 
