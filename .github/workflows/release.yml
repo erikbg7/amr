@@ -3,6 +3,7 @@ name: Release
   push:
     branches:
       - next
+      - main
       - '*.x'
 jobs:
   tests:
