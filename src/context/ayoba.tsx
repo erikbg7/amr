@@ -1,10 +1,10 @@
 import React from 'react';
-import { onPaymentStatusChanged, onPermissionsAccepted } from './listeners';
-import { getAyobaContext } from './url';
-import { getAyobaSenders } from './senders';
-import * as ayobaStubbedApi from './stub';
-import { getAyoba } from './init';
-import { AyobaChatContext, AyobaDiscoveryContext } from './types.ayoba';
+import { onPaymentStatusChanged, onPermissionsAccepted } from '../listeners';
+import { getAyobaContext } from '../utils/url';
+import { getAyobaSenders } from '../senders';
+import * as ayobaStubbedApi from '../stub';
+import { getAyoba } from '../init';
+import { AyobaChatContext, AyobaDiscoveryContext } from '../types.ayoba';
 
 window.onPermissionsAccepted = onPermissionsAccepted;
 window.onPaymentStatusChanged = onPaymentStatusChanged;

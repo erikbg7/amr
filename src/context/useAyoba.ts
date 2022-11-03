@@ -5,9 +5,9 @@ const throwNoContextError = () => {
   throw new Error('useAyobaPayment should be placed inside a AyobaProvider');
 };
 
-const useAyobaPayment = () => {
+const useAyoba = () => {
   const context = React.useContext<AyobaContextType>(AyobaContext);
   return context || throwNoContextError();
 };
 
-export { useAyobaPayment };
+export { useAyoba };
