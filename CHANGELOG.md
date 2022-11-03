@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/erikbg7/amr/compare/v1.0.3...v1.0.4) (2022-11-03)
+
+
+### Bug Fixes
+
+* :blue_book: Payments hook and Ayoba singleton ([e53753c](https://github.com/erikbg7/amr/commit/e53753cec6954aea86b0f319533f0b0e1838df0f))
+
 ## [1.0.3](https://github.com/erikbg7/amr/compare/v1.0.2...v1.0.3) (2022-11-02)
 
 
