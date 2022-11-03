@@ -1,5 +1,7 @@
 {
   "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
     "@semantic-release/github",
     [
       "@semantic-release/changelog",
@@ -14,8 +16,6 @@
         "assets": ["CHANGELOG.md", "README.md", "package.json", "package-lock.json"],
         "message": ":bookmark: Release v${nextRelease.version} [skip ci]"
       }
-    ],
-    "@semantic-release/commit-analyzer",
-    "@semantic-release/release-notes-generator"
+    ]
   ]
 }

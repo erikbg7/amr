@@ -2,11 +2,8 @@ import { useEffect, useState } from 'react';
 import { getAyobaMethodsInstance } from '../client';
 import { onAvatarChanged, onNicknameChanged, onProfileChanged } from '../listeners';
 
-// @ts-ignore
 window.onNicknameChanged = onNicknameChanged;
-// @ts-ignore
 window.onAvatarChanged = onAvatarChanged;
-// @ts-ignore
 window.onProfileChanged = onProfileChanged;
 
 interface IProfile {
