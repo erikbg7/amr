@@ -1,2 +1,2 @@
 # Ayoba Microapps React
-This is a boilerplate for creating microapps using React. 
+NPM package to easily use Ayoba API methods from React.
